@@ -1,3 +1,3 @@
 public interface UsaMana {
-    int mana = 0;
+    void consumirMana();
 }

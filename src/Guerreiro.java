@@ -1,11 +1,9 @@
 public class Guerreiro extends Personagem implements UsaEstamina{
-    
-   private String nome;
-   private int vida;
+
    private int estamina;
 
-    public Guerreiro() {
-        this.vida = 800;
+    public Guerreiro(String nome) {
+        super(nome, 800);
         this.estamina = 500;
     }
 

@@ -1,13 +1,21 @@
-public class Paladino {
-    private String nome;
-    private int vida;
+public class Paladino extends Personagem{
+
     private int estamina;
     private int mana;
 
-    public Paladino() {
-        this.vida = 500;
+    public Paladino(String nome) {
+        super(nome, 500);
         this.estamina = 500;
-        this.mana = 400;
+        this.mana = 300;
     }
 
+    @Override
+    void atacar() {
+
+    }
+
+    @Override
+    void defender() {
+
+    }
 }

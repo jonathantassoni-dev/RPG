@@ -1,4 +1,4 @@
-public class Paladino extends Personagem{
+public class Paladino extends Personagem implements usaEstamina, UsaMana{
 
     private int estamina;
     private int mana;
@@ -16,6 +16,16 @@ public class Paladino extends Personagem{
 
     @Override
     void defender() {
+
+    }
+
+    @Override
+    public void consumirMana() {
+
+    }
+
+    @Override
+    public void consumirEstamina() {
 
     }
 }

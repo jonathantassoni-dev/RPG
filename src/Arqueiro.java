@@ -1,4 +1,4 @@
-public class Arqueiro extends Personagem{
+public class Arqueiro extends Personagem implements usaEstamina{
 
     private int estamina;
 
@@ -14,6 +14,11 @@ public class Arqueiro extends Personagem{
 
     @Override
     void defender() {
+
+    }
+
+    @Override
+    public void consumirEstamina() {
 
     }
 }

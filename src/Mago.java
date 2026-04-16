@@ -1,4 +1,4 @@
-public class Mago extends Personagem{
+public class Mago extends Personagem implements usaEstamina{
 
     private int mana;
 
@@ -14,6 +14,11 @@ public class Mago extends Personagem{
 
     @Override
     void defender() {
+
+    }
+
+    @Override
+    public void consumirEstamina() {
 
     }
 }

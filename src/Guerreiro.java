@@ -1,6 +1,7 @@
-public class Guerreiro extends Personagem implements usaEstamina{
+public class Guerreiro extends Personagem implements UsaEstamina {
 
    private int estamina;
+   private static final double BLOQUEIO = 0.80;
 
     public Guerreiro(String nome) {
         super(nome, 800);
@@ -8,8 +9,9 @@ public class Guerreiro extends Personagem implements usaEstamina{
     }
 
     @Override
-    void atacar() {
-        
+    void atacar(Personagem alvo) {
+        System.out.println("Ataque de espada!");
+        alvo.tomarDano(50);
     }
 
     @Override

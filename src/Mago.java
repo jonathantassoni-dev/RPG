@@ -1,6 +1,7 @@
-public class Mago extends Personagem implements usaEstamina{
+public class Mago extends Personagem implements UsaMana{
 
     private int mana;
+    private static final double BLOQUEIO = 0.10;
 
     public Mago(String nome) {
         super(nome, 300);
@@ -8,8 +9,9 @@ public class Mago extends Personagem implements usaEstamina{
     }
 
     @Override
-    void atacar() {
-
+    void atacar(Personagem alvo) {
+        System.out.println("ataque de bola de fogo!");
+        alvo.tomarDano(100);
     }
 
     @Override
@@ -17,8 +19,9 @@ public class Mago extends Personagem implements usaEstamina{
 
     }
 
+
     @Override
-    public void consumirEstamina() {
+    public void consumirMana() {
 
     }
 }

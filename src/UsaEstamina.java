@@ -1,3 +1,3 @@
-public interface usaEstamina {
+public interface UsaEstamina {
     void consumirEstamina();
 }

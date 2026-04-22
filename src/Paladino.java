@@ -1,7 +1,8 @@
-public class Paladino extends Personagem implements usaEstamina, UsaMana{
+public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     private int estamina;
     private int mana;
+    private static final double BLOQUEIO = 0.50;
 
     public Paladino(String nome) {
         super(nome, 500);
@@ -10,8 +11,9 @@ public class Paladino extends Personagem implements usaEstamina, UsaMana{
     }
 
     @Override
-    void atacar() {
-
+    void atacar(Personagem alvo) {
+        System.out.println("Ataque de martelo magico!");
+        alvo.tomarDano(70);
     }
 
     @Override

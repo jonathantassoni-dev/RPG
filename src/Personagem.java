@@ -8,7 +8,7 @@ public abstract class Personagem {
     }
 
     abstract void atacar(Personagem alvo);
-    abstract void defender();
+    abstract void defender(int dano);
 
     public String getNome() {
         return nome;

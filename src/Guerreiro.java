@@ -5,7 +5,7 @@ public class Guerreiro extends Personagem implements UsaEstamina {
 
     public Guerreiro(String nome) {
         super(nome, 800);
-        this.estamina = 500;
+        this.estamina = 300;
     }
 
     public int getEstamina() {
@@ -18,8 +18,15 @@ public class Guerreiro extends Personagem implements UsaEstamina {
 
     @Override
     void atacar(Personagem alvo) {
-        System.out.println("Ataque de espada!");
-        alvo.tomarDano(50);
+        if (this.estamina < 50) {
+            System.out.println("-------------------");
+            System.out.println("Sem estamina! não consigo atacar!");
+        } else {
+            System.out.println("Ataque de espada!");
+            alvo.tomarDano(50);
+            consumirEstamina();
+        }
+
     }
 
     @Override
@@ -35,7 +42,20 @@ public class Guerreiro extends Personagem implements UsaEstamina {
 
 
     @Override
+    void beberPocaoDeVida() {
+
+    }
+
+
+
+
+    @Override
     public void consumirEstamina() {
+        this.estamina -= 50;
+    }
+
+    @Override
+    public void beberPocaoDeEstamina() {
 
     }
 }

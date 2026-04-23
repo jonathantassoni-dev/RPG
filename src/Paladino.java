@@ -23,7 +23,7 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     public Paladino(String nome) {
         super(nome, 500);
-        this.estamina = 500;
+        this.estamina = 200;
         this.mana = 300;
     }
 
@@ -45,7 +45,23 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
     }
 
     @Override
+    public void beberPocaoDeMana() {
+
+    }
+
+    @Override
+    void beberPocaoDeVida() {
+
+    }
+
+
+    @Override
     public void consumirEstamina() {
+
+    }
+
+    @Override
+    public void beberPocaoDeEstamina() {
 
     }
 

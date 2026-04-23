@@ -18,8 +18,14 @@ public class Mago extends Personagem implements UsaMana{
 
     @Override
     void atacar(Personagem alvo) {
-        System.out.println("ataque de bola de fogo!");
-        alvo.tomarDano(100);
+        if(this.mana < 100) {
+            System.out.println("Não consigo atacar, estou sem mana!");
+        } else {
+            System.out.println("ataque de bola de fogo!");
+            alvo.tomarDano(100);
+            consumirMana();
+        }
+
     }
 
     @Override
@@ -34,8 +40,21 @@ public class Mago extends Personagem implements UsaMana{
     }
 
 
+
+    @Override
+    void beberPocaoDeVida() {
+
+    }
+
+
+
     @Override
     public void consumirMana() {
+
+    }
+
+    @Override
+    public void beberPocaoDeMana() {
 
     }
 }

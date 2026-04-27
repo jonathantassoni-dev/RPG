@@ -48,7 +48,6 @@ public class Guerreiro extends Personagem implements UsaEstamina {
 
 
 
-
     @Override
     public void consumirEstamina() {
         this.estamina -= 50;

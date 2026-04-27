@@ -2,6 +2,13 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     private int estamina;
     private int mana;
+    private static final double BLOQUEIO = 0.50;
+
+    public Paladino(String nome) {
+        super(nome, 500);
+        this.estamina = 300;
+        this.mana = 300;
+    }
 
     public int getEstamina() {
         return estamina;
@@ -19,18 +26,24 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
         this.mana = mana;
     }
 
-    private static final double BLOQUEIO = 0.50;
 
-    public Paladino(String nome) {
-        super(nome, 500);
-        this.estamina = 200;
-        this.mana = 300;
-    }
 
     @Override
     void atacar(Personagem alvo) {
-        System.out.println("Ataque de martelo magico!");
-        alvo.tomarDano(70);
+        if(this.estamina < 50 && this.mana > 50) {
+            System.out.println("-------------------");
+            System.out.println("Sem estamina, não consigo atacar!");
+        } else if(this.estamina > 50 && this.mana < 50) {
+            System.out.println("-------------------");
+            System.out.println("Sem mana, não consigo atacar!");
+        } else {
+            System.out.println("-------------------");
+            System.out.println("Ataque de martelo mágico!");
+            alvo.tomarDano(75);
+            consumirEstamina();
+            consumirMana();
+        }
+
     }
 
     @Override
@@ -62,12 +75,12 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     @Override
     public void beberPocaoDeEstamina() {
-
+        this.estamina -= 50;
     }
 
     @Override
     public void consumirMana() {
-
+        this.mana -= 50;
     }
 }
 

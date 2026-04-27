@@ -3,6 +3,11 @@ public class Mago extends Personagem implements UsaMana{
     private int mana;
     private static final double BLOQUEIO = 0.10;
 
+    public Mago(String nome) {
+        super(nome, 300);
+        this.mana = 800;
+    }
+
     public int getMana() {
         return mana;
     }
@@ -11,14 +16,11 @@ public class Mago extends Personagem implements UsaMana{
         this.mana = mana;
     }
 
-    public Mago(String nome) {
-        super(nome, 300);
-        this.mana = 800;
-    }
 
     @Override
     void atacar(Personagem alvo) {
         if(this.mana < 100) {
+            System.out.println("-------------------");
             System.out.println("Não consigo atacar, estou sem mana!");
         } else {
             System.out.println("ataque de bola de fogo!");

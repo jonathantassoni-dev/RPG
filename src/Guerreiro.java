@@ -36,9 +36,14 @@ public class Guerreiro extends Personagem implements UsaEstamina {
         int danoRecebido = dano - danoBloqueado;
         tomarDano(danoRecebido);
         System.out.println("----------------------------------");
-        System.out.println("Dano recebido: " + danoRecebido);
+        System.out.println("Dano recebido: -" + danoRecebido);
         System.out.println("Vida: " + this.getVida());
+
+        if(this.getVida() <= 0) {
+            System.out.println("----VOCÊ FOI DERROTADO!----");
+        }
     }
+
 
 
     @Override

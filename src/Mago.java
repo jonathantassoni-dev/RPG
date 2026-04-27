@@ -39,6 +39,10 @@ public class Mago extends Personagem implements UsaMana{
         System.out.println("----------------------------------");
         System.out.println("Dano recebido: " + danoRecebido);
         System.out.println("Vida: " + this.getVida());
+
+        if(this.getVida() <= 0) {
+            System.out.println("----VOCÊ FOI DERROTADO!----");
+        }
     }
 
 

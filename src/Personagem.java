@@ -18,7 +18,6 @@ public abstract class Personagem {
         System.out.println(getNome() + " bebeu poção de vida!");
         System.out.println("Recuperando +500 de vida");
         System.out.println("Vida: " + this.vida);
-
     }
 
 

@@ -1,11 +1,14 @@
 public class Mago extends Personagem implements UsaMana{
 
     private int mana;
+    private int manaMaxima;
     private static final double BLOQUEIO = 0.10;
 
-    public Mago(String nome) {
+    public Mago(String nome, int manaMaxima) {
         super(nome, 300);
-        this.mana = 800;
+        this.manaMaxima = manaMaxima;
+        setMana(800);
+
     }
 
     public int getMana() {
@@ -13,7 +16,7 @@ public class Mago extends Personagem implements UsaMana{
     }
 
     public void setMana(int mana) {
-        this.mana = mana;
+        this.mana = Math.min(mana, manaMaxima);
     }
 
 
@@ -50,11 +53,15 @@ public class Mago extends Personagem implements UsaMana{
 
     @Override
     public void consumirMana() {
-        this.mana -= 100;
+        setMana(Math.max(this.mana -100, 0));
     }
 
     @Override
     public void beberPocaoDeMana() {
-
+        setMana(this.mana + 500);
+        System.out.println("----------------------------------");
+        System.out.println(getNome() + " bebeu poção de mana!");
+        System.out.println("Recuperando +500 de mana");
+        System.out.println("Mana: " + this.mana);
     }
 }

@@ -62,23 +62,7 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
     }
 
     @Override
-    public void beberPocaoDeMana() {
-
-    }
-
-    @Override
-    void beberPocaoDeVida() {
-
-    }
-
-
-    @Override
     public void consumirEstamina() {
-
-    }
-
-    @Override
-    public void beberPocaoDeEstamina() {
         this.estamina -= 50;
     }
 
@@ -86,6 +70,19 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
     public void consumirMana() {
         this.mana -= 50;
     }
+
+
+    @Override
+    public void beberPocaoDeMana() {
+
+    }
+
+    @Override
+    public void beberPocaoDeEstamina() {
+
+    }
+
+
 }
 
 

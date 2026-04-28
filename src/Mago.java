@@ -47,12 +47,6 @@ public class Mago extends Personagem implements UsaMana{
 
 
 
-    @Override
-    void beberPocaoDeVida() {
-
-    }
-
-
 
     @Override
     public void consumirMana() {

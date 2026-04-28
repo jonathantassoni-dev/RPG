@@ -50,7 +50,7 @@ public class Mago extends Personagem implements UsaMana{
 
     @Override
     public void consumirMana() {
-
+        this.mana -= 100;
     }
 
     @Override

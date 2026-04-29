@@ -1,9 +1,24 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
+
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
 
-        System.out.println("hello world!");
+
+        do {
+            System.out.println("\n------ MENU ------");
+            System.out.println("1. Escolha de classe:");
+            System.out.println("2. Opção 2");
+            System.out.println("0. Sair");
+
+
+            opcao = scanner.nextInt();
+
+
+
+        }while(opcao != 0);
 
 
     }

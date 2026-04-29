@@ -34,13 +34,13 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     @Override
     void atacar(Personagem alvo) {
-        if(this.estamina < 50 && this.mana > 50) {
+        if(this.estamina < 50) {
             System.out.println("-------------------");
             System.out.println("Sem estamina, não consigo atacar!");
-        } else if(this.estamina > 50 && this.mana < 50) {
+        } else if(this.mana < 50) {
             System.out.println("-------------------");
             System.out.println("Sem mana, não consigo atacar!");
-        } else {
+        }else{
             System.out.println("-------------------");
             System.out.println("Ataque de martelo mágico!");
             alvo.tomarDano(75);

@@ -78,12 +78,20 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     @Override
     public void beberPocaoDeMana() {
-
+        setMana(this.mana + 500);
+        System.out.println("----------------------------------");
+        System.out.println(getNome() + " bebeu poção de mana!");
+        System.out.println("Recuperando +500 de mana");
+        System.out.println("Mana: " + this.mana);
     }
 
     @Override
     public void beberPocaoDeEstamina() {
-
+        setEstamina(this.estamina + 500);
+        System.out.println("----------------------------------");
+        System.out.println(getNome() + " bebeu poção de estamina!");
+        System.out.println("Recuperando +500 de estamina");
+        System.out.println("Estamina: " + this.estamina);
     }
 
 

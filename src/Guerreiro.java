@@ -54,6 +54,10 @@ public class Guerreiro extends Personagem implements UsaEstamina {
 
     @Override
     public void beberPocaoDeEstamina() {
-
+        setEstamina(this.estamina + 500);
+        System.out.println("----------------------------------");
+        System.out.println(getNome() + " bebeu poção de estamina!");
+        System.out.println("Recuperando +500 de estamina");
+        System.out.println("Estamina: " + this.estamina);
     }
 }

@@ -1,11 +1,13 @@
 public class Guerreiro extends Personagem implements UsaEstamina {
 
    private int estamina;
+   private int estaminaMaxima;
    private static final double BLOQUEIO = 0.80;
 
     public Guerreiro(String nome) {
         super(nome, 800);
-        this.estamina = 300;
+        this.estaminaMaxima = 800;
+        setEstamina(800);
     }
 
     public int getEstamina() {
@@ -13,7 +15,7 @@ public class Guerreiro extends Personagem implements UsaEstamina {
     }
 
     public void setEstamina(int estamina) {
-        this.estamina = estamina;
+        this.estamina = Math.min(estamina, estaminaMaxima);
     }
 
     @Override
@@ -47,7 +49,7 @@ public class Guerreiro extends Personagem implements UsaEstamina {
 
     @Override
     public void consumirEstamina() {
-        this.estamina -= 50;
+        setEstamina(Math.max(this.estamina -50, 0));
     }
 
     @Override

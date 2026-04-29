@@ -4,9 +4,9 @@ public class Mago extends Personagem implements UsaMana{
     private int manaMaxima;
     private static final double BLOQUEIO = 0.10;
 
-    public Mago(String nome, int manaMaxima) {
+    public Mago(String nome) {
         super(nome, 300);
-        this.manaMaxima = manaMaxima;
+        this.manaMaxima = 800;
         setMana(800);
 
     }

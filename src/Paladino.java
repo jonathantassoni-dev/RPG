@@ -1,13 +1,17 @@
 public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     private int estamina;
+    private int estaminaMaxima;
     private int mana;
+    private int manaMaxima;
     private static final double BLOQUEIO = 0.50;
 
     public Paladino(String nome) {
         super(nome, 500);
-        this.estamina = 300;
-        this.mana = 300;
+        this.estaminaMaxima = 500;
+        setEstamina(500);
+        this.manaMaxima = 300;
+        setMana(300);
     }
 
     public int getEstamina() {
@@ -15,7 +19,7 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
     }
 
     public void setEstamina(int estamina) {
-        this.estamina = estamina;
+        this.estamina = Math.min(estamina, estaminaMaxima);
     }
 
     public int getMana() {
@@ -23,7 +27,7 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
     }
 
     public void setMana(int mana) {
-        this.mana = mana;
+        this.mana = Math.min(mana, manaMaxima);
     }
 
 
@@ -63,12 +67,12 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
 
     @Override
     public void consumirEstamina() {
-        this.estamina -= 50;
+        setEstamina(Math.max(this.estamina - 50, 0));
     }
 
     @Override
     public void consumirMana() {
-        this.mana -= 50;
+        setMana(Math.max(this.mana -50, 0));
     }
 
 

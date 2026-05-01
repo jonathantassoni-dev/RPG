@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class MenuClasses {
 
-
     public void exibirMenuClasses() {
         Scanner scanner = new Scanner(System.in);
+        MenuPrincipal menuPrincipal = new MenuPrincipal();
         int opcao;
 
         System.out.println("\n------ CLASSES ------");
         System.out.println("1. Guerreiro");
         System.out.println("2. Mago");
         System.out.println("3. Paladino");
-        System.out.println("0. <Voltar>");
+        System.out.println("0. Voltar");
         opcao = scanner.nextInt();
 
         switch (opcao) {
@@ -25,7 +25,8 @@ public class MenuClasses {
                 System.out.println("Mostra Paladino");
                 break;
             case 0:
-                System.out.println("Volta o menu");
+                //Volta o menu
+                menuPrincipal.exibirMenuPrincipal();
                 break;
             default:
                 System.out.println("Valor Invalido!");

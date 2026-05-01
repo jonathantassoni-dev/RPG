@@ -5,11 +5,12 @@ public class MenuPrincipal {
 
     public void exibirMenuPrincipal() {
         Scanner scanner = new Scanner(System.in);
+
         int opcao;
 
             System.out.println("\n------ MENU ------");
             System.out.println("1. Escolha sua classe:");
-            System.out.println("0. Sair");
+            System.out.println("0. <Sair>");
             opcao = scanner.nextInt();
 
             switch (opcao) {

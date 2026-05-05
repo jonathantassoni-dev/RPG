@@ -2,13 +2,19 @@ public class Mago extends Personagem implements UsaMana{
 
     private int mana;
     private int manaMaxima;
-    private static final double BLOQUEIO = 0.10;
+    private final double BLOQUEIO = 0.10;
 
     public Mago(String nome) {
         super(nome, 300);
         this.manaMaxima = 800;
         setMana(800);
 
+    }
+
+    public Mago() {
+        super(300);
+        this.manaMaxima = 800;
+        setMana(800);
     }
 
     public int getMana() {
@@ -19,6 +25,9 @@ public class Mago extends Personagem implements UsaMana{
         this.mana = Math.min(mana, manaMaxima);
     }
 
+    public double getBLOQUEIO() {
+        return BLOQUEIO;
+    }
 
     @Override
     void atacar(Personagem alvo) {

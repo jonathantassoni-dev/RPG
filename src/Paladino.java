@@ -4,10 +4,18 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
     private int estaminaMaxima;
     private int mana;
     private int manaMaxima;
-    private static final double BLOQUEIO = 0.50;
+    private final double BLOQUEIO = 0.50;
 
     public Paladino(String nome) {
         super(nome, 500);
+        this.estaminaMaxima = 500;
+        setEstamina(500);
+        this.manaMaxima = 300;
+        setMana(300);
+    }
+
+    public Paladino() {
+        super(500);
         this.estaminaMaxima = 500;
         setEstamina(500);
         this.manaMaxima = 300;
@@ -30,7 +38,9 @@ public class Paladino extends Personagem implements UsaEstamina, UsaMana{
         this.mana = Math.min(mana, manaMaxima);
     }
 
-
+    public double getBLOQUEIO() {
+        return BLOQUEIO;
+    }
 
     @Override
     void atacar(Personagem alvo) {

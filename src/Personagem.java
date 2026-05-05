@@ -9,6 +9,13 @@ public abstract class Personagem {
         this.vidaMaxima = vida;
     }
 
+    public Personagem(int vida) {
+        this.vida = vida;
+        this.vidaMaxima = vida;
+    }
+
+
+
     abstract void atacar(Personagem alvo);
     abstract void defender(int dano);
 

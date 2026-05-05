@@ -1,19 +1,21 @@
 import java.util.Scanner;
 
 public class MenuClasses {
+    Scanner scanner = new Scanner(System.in);
+    MenuPrincipal menuPrincipal = new MenuPrincipal();
+    int opcao;
 
     public void exibirMenuClasses() {
-        Scanner scanner = new Scanner(System.in);
-        MenuPrincipal menuPrincipal = new MenuPrincipal();
-        int opcao;
-
         System.out.println("\n------ CLASSES ------");
         System.out.println("1. Guerreiro");
         System.out.println("2. Mago");
         System.out.println("3. Paladino");
         System.out.println("0. Voltar");
-        opcao = scanner.nextInt();
+        exibirStatusClasses();
+        }
 
+    public void exibirStatusClasses() {
+        opcao = scanner.nextInt();
         switch (opcao) {
             case 1:
                 Guerreiro g1 = new Guerreiro();
@@ -45,11 +47,9 @@ public class MenuClasses {
                 System.out.println("Valor Invalido!");
                 break;
         }
-
-
     }
 
-    public void exibirStatusClasses() {
-
+    public void confirmarClasse() {
+        //Criar confirmação de classe
     }
 }

@@ -23,6 +23,7 @@ public class MenuClasses {
                 System.out.println("Vida: " + g1.getVida());
                 System.out.println("Stamina: " + g1.getEstamina());
                 System.out.println(String.format("Bloqueio: %.0f%%", g1.getBLOQUEIO() * 100));
+                confirmarClasse();
                 break;
             case 2:
                 Mago m1 = new Mago();
@@ -30,6 +31,7 @@ public class MenuClasses {
                 System.out.println("Vida: " + m1.getVida());
                 System.out.println("Mana: " + m1.getMana());
                 System.out.println(String.format("Bloqueio: %.0f%%", m1.getBLOQUEIO() * 100));
+                confirmarClasse();
                 break;
             case 3:
                 Paladino p1 = new Paladino();
@@ -38,6 +40,7 @@ public class MenuClasses {
                 System.out.println("Estamina: " + p1.getEstamina());
                 System.out.println("Mana: " + p1.getMana());
                 System.out.println(String.format("Bloqueio: %.0f%%", p1.getBLOQUEIO() * 100));
+                confirmarClasse();
                 break;
             case 0:
                 //Volta o menu
@@ -50,6 +53,15 @@ public class MenuClasses {
     }
 
     public void confirmarClasse() {
-        //Criar confirmação de classe
+        System.out.println("-----------------------");
+        System.out.println("1. Confirmar");
+        System.out.println("0. Voltar");
+        opcao = scanner.nextInt();
+        if (opcao == 0) {
+            exibirMenuClasses() ;
+        } else {
+            System.out.println("Confirmou!");
+        }
+
     }
 }

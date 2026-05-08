@@ -1,8 +1,13 @@
 import java.util.Scanner;
 
 public class MenuClasses {
-    Scanner scanner = new Scanner(System.in);
-    MenuPrincipal menuPrincipal = new MenuPrincipal();
+    private Scanner scanner;
+
+    public MenuClasses(Scanner scanner) {
+        this.scanner = scanner;
+    }
+
+    MenuPrincipal menuPrincipal = new MenuPrincipal(scanner);
     int opcao;
 
     public void exibirMenuClasses() {
@@ -26,7 +31,7 @@ public class MenuClasses {
                 confirmarClasse();
                 break;
             case 2:
-                Mago m1 = new Mago();
+                Mago m1 = new Mago("");
                 System.out.println("\n------ MAGO ------");
                 System.out.println("Vida: " + m1.getVida());
                 System.out.println("Mana: " + m1.getMana());
@@ -44,8 +49,7 @@ public class MenuClasses {
                 break;
             case 0:
                 //Volta o menu
-                menuPrincipal.exibirMenuPrincipal();
-                break;
+                return;
             default:
                 System.out.println("Valor Invalido!");
                 break;

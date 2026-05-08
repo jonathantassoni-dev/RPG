@@ -1,11 +1,14 @@
 import java.util.Scanner;
 
 public class MenuPrincipal {
+    private Scanner scanner;
 
+    public MenuPrincipal(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public void exibirMenuPrincipal() {
-        Scanner scanner = new Scanner(System.in);
-        MenuClasses menuClasses = new MenuClasses();
+        MenuClasses menuClasses = new MenuClasses(scanner);
         int opcao;
 
             System.out.println("\n------ MENU ------");
@@ -25,7 +28,5 @@ public class MenuPrincipal {
                     System.out.println("Valor Incorreto!");
                     break;
             }
-            scanner.close();
     }
-
 }
